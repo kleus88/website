@@ -5,7 +5,7 @@ class NavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 80,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -16,13 +16,6 @@ class NavigationBar extends StatelessWidget {
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              _NavBarItem('Epixodes'),
-              SizedBox(
-                width: 60,
-              ),
-              _NavBarItem('About'),
-            ],
           ),
         ],
       ),

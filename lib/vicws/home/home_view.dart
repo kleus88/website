@@ -9,19 +9,53 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: CenteredView(
-        child: Column(
-          children: <Widget>[
-            NavigationBar(),
-            Expanded(
-              child: Row(
-                children: <Widget>[
-                  CourseDetails(),
-                ],
-              ),
+      body: new ListView(
+        children: <Widget>[
+          NavigationBar(),
+          Container(
+            margin: EdgeInsets.all(40),
+            padding: EdgeInsets.only(top: 40),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Row(children: <Widget>[
+                  RichText(
+                    text: TextSpan(
+                        text: 'Win luxury watches.',
+                        style: TextStyle(
+                            fontSize: 70,
+                            color: Colors.black,
+                            fontFamily: 'Rufina Regular',
+                            fontWeight: FontWeight.normal),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: '\n Luxury ',
+                            style: TextStyle(fontFamily: 'Rufina Regular'),
+                          ),
+                          TextSpan(
+                            text: ' lottery ',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Rufina Regular',
+                              backgroundColor:
+                                  Color.fromARGB(255, 225, 206, 139),
+                            ),
+                          ),
+                        ]),
+                    textAlign: TextAlign.center,
+                  ),
+                  Container(
+                    child: Image.asset(
+                      'img/logo.png',
+                      scale: 2,
+                    ),
+                  ),
+                ]),
+                //  CourseDetails(),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
